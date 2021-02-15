@@ -1,0 +1,8 @@
+Username: [enter username here]
+Password: [password]
+
+
+// Note: Make sure there is a space between the colon and your info
+// Ex:
+//  Username: nameHere
+//  Password: PasswdHere
