@@ -3,7 +3,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
-
+//working for patch 0.17.12
 
 public class amqScript extends Thread {
     public static int dirtyBit;
@@ -29,17 +29,12 @@ public class amqScript extends Thread {
         //Cannot click on mpPlaySolo because loadingScreen obscure it so wait for invisibility of it
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("loadingScreen")));
         driver.findElement(By.id("mpPlaySolo")).click();
-        wait.until(ExpectedConditions.elementToBeClickable(By.id("mhHostStanardImg"))).click();
 
         WebElement numSongTxt = driver.findElement(By.xpath("//input[@id='mhNumberOfSongsText']"));
         numSongTxt.click();
         numSongTxt.clear();
         numSongTxt.clear();
         numSongTxt.sendKeys(numOfSong);
-
-        WebElement songSelection = driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[7]/div/div/div[3]/div[2]/div[1]/div[4]/div[1]/div[1]/div[1]/div/div[7]"));
-        songSelection.click(); //Select Mainly Watched so you can get points
-
 
         WebElement host = driver.findElement(By.id("mhHostButton"));
         new Actions(driver).moveToElement(host).click().perform();
