@@ -11,3 +11,6 @@ Script using both Java and Selenium to log you in, host a solo game, and then re
 
 # ToDo List
 1) add a jar file
+
+# Disclaimer
+Use at your own risk of being ban, hacked, etc. from the website.
